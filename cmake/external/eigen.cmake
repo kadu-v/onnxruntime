@@ -10,7 +10,7 @@ set(PATCH_EIGEN_S390X_WERROR ${PROJECT_SOURCE_DIR}/patches/eigen/s390x-build-wer
 onnxruntime_fetchcontent_declare(
     Eigen3
     URL ${DEP_URL_eigen}
-    URL_HASH SHA1=${DEP_SHA1_eigen}
+    URL_HASH ""
     PATCH_COMMAND ${Patch_EXECUTABLE} --binary --ignore-whitespace -p1 < ${PATCH_EIGEN_S390X} &&
                   ${Patch_EXECUTABLE} --binary --ignore-whitespace -p1 < ${PATCH_EIGEN_S390X_WERROR}
     EXCLUDE_FROM_ALL
